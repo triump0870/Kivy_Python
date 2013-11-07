@@ -4,7 +4,18 @@ from kivy.properties import NumericProperty, ReferenceListProperty
 from kivy.vector import Vector
 
 class PongGame(Widget):
-	pass
+	ball =ObjectProperty(None)
+	def update(self, dt):
+		# call ball.move and other stuff
+		self.ball.move()
+
+		# bounce off top and bottom
+		if (self.ball.y < 0) or (self.ball.y > self.height):
+			self.ball.velocity_y *= -1
+		# bounce off left and right
+		if (self.ball.x < 0) or (self.ball.x > self.width):
+			self.ball.velocity_x *= -1
+		pass
 
 class PongBall(Widget):
 	# velocity of the ball on x and y axis
@@ -22,7 +33,9 @@ class PongBall(Widget):
 
 class PongApp(App):
 	def build(self):
-		return PongGame()
+		game = PongGame()
+		Clock.schedule_interval(game.update, 1.0 / 60.0)
+		return game
 
 if __name__ == '__main__':
 	PongApp().run()
