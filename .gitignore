@@ -40,3 +40,5 @@ nosetests.xml
 *.py~
 *.kvc
 *.kv~
+*py.save
+*py.save~
