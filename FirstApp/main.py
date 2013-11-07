@@ -3,6 +3,7 @@ from kivy.graphics import Color, Rectangle
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.button import Button
 
+# root widget
 class RootWidget(FloatLayout):
 	def __init__(self, **kwargs):
 		
