@@ -15,5 +15,12 @@
 		center_x: root.width * 3 / 4
 		top: root.top - 50
 		text: "0"
+	PongBall:
+		center: self.parent.center
 
-
+<PongBall>:
+	size: 50, 50
+	canvas:
+		Ellipse:
+			pos: self.pos
+			size: self.size
