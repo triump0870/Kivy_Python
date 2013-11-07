@@ -43,3 +43,5 @@ nosetests.xml
 *py.save
 *py.save~
 *.txt~
+
+FirstApp
