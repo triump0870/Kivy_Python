@@ -3,7 +3,7 @@ from kivy.graphics import Color, Rectangle
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.button import Button
 
-# root widget
+# Root widget
 class RootWidget(FloatLayout):
 	def __init__(self, **kwargs):
 		
@@ -13,7 +13,7 @@ class RootWidget(FloatLayout):
 					text="Hello World",
 					size_hint= (.5, .5),
 					pos_hint = {'center_x':.5,'center_y':.5}))
-
+# Main app
 class MainApp(App):
 	def build(self):
 		self.root = root = RootWidget()
