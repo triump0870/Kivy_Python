@@ -1,4 +1,4 @@
-#: Kivy 1.7.2 
+#!Kivy 1.7.2 
 <PongGame>:
 	canvas:
 		Rectangle:
@@ -16,4 +16,9 @@
 		top: root.top - 50
 		text: "0"
 
-
+<PongBall>:
+	size: 50, 50
+	canvas:
+		Ellipse:
+			pos: self.pos
+			size: self.size
